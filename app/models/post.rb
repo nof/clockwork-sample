@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  def self.post_current_time
-    Post.create(body: Time.current.strftime('%Y年%m月%d日 %H:%M:%S'))
+  def self.post_current_time(title)
+    Post.create(body: "#{title}: #{Time.current.strftime('%Y年%m月%d日 %H:%M:%S')}")
   end
 end
