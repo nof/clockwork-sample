@@ -1,0 +1,7 @@
+.container
+  %ul.list-group
+  - @posts.each do |post|
+    %il.list-group-item
+      = post.body
+      %span.label.label-default.pull-right
+        = post.created_at
